@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6f7f9"
+    tools:context=".StatusFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <TextView
+            android:id="@+id/app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/_10sdp"
+            android:scaleY="1"
+            android:text="Project Status"
+            android:textColor="#3f434c"
+            android:textScaleX="1"
+            android:textSize="@dimen/_22ssp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+
+            android:layout_margin="@dimen/_13sdp"
+
+            android:src="@drawable/ic_menu_black_24dp"
+            android:tint="#A8000000" />
+
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bar"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:elevation="@dimen/_18sdp"
+        android:translationZ="@dimen/_18sdp"
+        app:cardCornerRadius="@dimen/_15sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_15sdp"
+            android:paddingRight="@dimen/_15sdp"
+            android:paddingBottom="@dimen/_15sdp">
+
+            <View
+                android:id="@+id/green_view"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_3sdp"
+                android:background="#56ee47" />
+
+            <TextView
+                android:id="@+id/approved"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/green_view"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Approved"
+                android:textColor="#56ee47"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/green_view"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="10 / 07"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_10ssp" />
+
+            <TextView
+                android:id="@+id/templ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/approved"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Template GMP control"
+                android:textColor="#A8000000"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_below="@id/templ"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:src="@drawable/me" />
+
+            <TextView
+                android:id="@+id/coment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/templ"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_toEndOf="@id/img"
+                android:text="comment by :"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/mostafa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/templ"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_toEndOf="@id/coment"
+                android:text="Mostafa Elmorshdi"
+                android:textColor="#A8000000"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/discri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/coment"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_toEndOf="@id/img"
+                android:text="Instructions 1.5,1.4 are clean and done ,good job"
+                android:textColor="#A8000000"
+                android:textSize="@dimen/_14ssp" />
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:elevation="@dimen/_18sdp"
+        android:translationZ="@dimen/_18sdp"
+        app:cardCornerRadius="@dimen/_15sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_15sdp"
+            android:paddingRight="@dimen/_15sdp"
+            android:paddingBottom="@dimen/_15sdp">
+
+            <View
+                android:id="@+id/green_view1"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_3sdp"
+                android:background="#f1c74d" />
+
+            <TextView
+                android:id="@+id/approved1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/green_view1"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="In progress"
+                android:textColor="#f1c74d"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/count1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/green_view1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="10 / 07"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_10ssp" />
+
+            <TextView
+                android:id="@+id/templ1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/approved1"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Template GMP control"
+                android:textColor="#A8000000"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_below="@id/templ1"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:src="@drawable/me" />
+
+            <TextView
+                android:id="@+id/coment1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/templ1"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_toEndOf="@id/img1"
+                android:text="comment by :"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/mostafa1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/templ1"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_toEndOf="@id/coment1"
+                android:text="Mostafa Elmorshdi"
+                android:textColor="#A8000000"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/discri1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/coment1"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_toEndOf="@id/img1"
+                android:text="Instructions 1.5,1.4 are clean and done ,good job"
+                android:textColor="#A8000000"
+                android:textSize="@dimen/_14ssp" />
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card1"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:elevation="@dimen/_18sdp"
+        android:translationZ="@dimen/_18sdp"
+        app:cardCornerRadius="@dimen/_15sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_15sdp"
+            android:paddingRight="@dimen/_15sdp"
+            android:paddingBottom="@dimen/_15sdp">
+
+            <View
+                android:id="@+id/green_view2"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_3sdp"
+                android:background="#f14c4d" />
+
+            <TextView
+                android:id="@+id/approved2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/green_view2"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Deslined"
+                android:textColor="#f14c4d"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/count2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/green_view2"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="10 / 07"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_10ssp" />
+
+            <TextView
+                android:id="@+id/templ2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/approved2"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Template GMP control"
+                android:textColor="#A8000000"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_below="@id/templ2"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:src="@drawable/me" />
+
+            <TextView
+                android:id="@+id/coment2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/templ2"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_toEndOf="@id/img2"
+                android:text="comment by :"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/mostafa2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/templ2"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_toEndOf="@id/coment2"
+                android:text="Mostafa Elmorshdi"
+                android:textColor="#A8000000"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/discri2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/coment2"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_toEndOf="@id/img2"
+                android:text="Instructions 1.5,1.4 are clean and done ,good job"
+                android:textColor="#A8000000"
+                android:textSize="@dimen/_14ssp" />
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

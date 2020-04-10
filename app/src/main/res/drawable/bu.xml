@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/mr_dynamic_dialog_header_text_color_dark">
+    <item>
+        <shape>
+            <stroke
+                android:width="@dimen/_2sdp"
+                android:color="@color/colorPrimary" />
+            <solid android:color="@android:color/white" />
+
+
+            <corners android:radius="@dimen/_10sdp" />
+        </shape>
+
+    </item>
+</ripple><!-- <?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+ <stroke android:color="@color/colorPrimary"
+     android:width="@dimen/_2sdp"/>
+<solid android:color="@android:color/white"/>
+  <corners android:radius="@dimen/_10sdp" />
+</shape> -->
