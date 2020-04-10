@@ -50,6 +50,7 @@
         android:layout_marginBottom="@dimen/_5sdp"
         android:elevation="@dimen/_18sdp"
         android:translationZ="@dimen/_18sdp"
+        android:background="@drawable/card"
         app:cardCornerRadius="@dimen/_15sdp">
 
         <RelativeLayout
@@ -156,6 +157,7 @@
         android:layout_marginRight="@dimen/_10sdp"
         android:layout_marginBottom="@dimen/_5sdp"
         android:elevation="@dimen/_18sdp"
+        android:background="@drawable/card"
         android:translationZ="@dimen/_18sdp"
         app:cardCornerRadius="@dimen/_15sdp">
 
@@ -263,6 +265,7 @@
         android:layout_marginRight="@dimen/_10sdp"
         android:layout_marginBottom="@dimen/_5sdp"
         android:elevation="@dimen/_18sdp"
+        android:background="@drawable/card"
         android:translationZ="@dimen/_18sdp"
         app:cardCornerRadius="@dimen/_15sdp">
 
