@@ -1,26 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/GuideLines"
-        android:icon="@drawable/ic_assignment_black_24dp"
-        android:title="GuideLines" />
-
-    <item
         android:id="@+id/status"
-        android:icon="@drawable/ic_show_chart_black_24dp"
-        android:title="status" />
+        android:icon="@drawable/person"
+        android:title="Contact" />
 
     <item
         android:id="@+id/projects"
-        android:icon="@drawable/ic_folder_black_24dp"
-        android:title="Projects" />
+        android:icon="@drawable/messagesico"
+        android:title="Leave req" />
     <item
         android:id="@+id/user_info"
-        android:icon="@drawable/ic_account_circle_black_24dp"
-        android:title="User Info" />
+        android:icon="@drawable/attendace"
+        android:title="History" />
 
-    <item
-        android:id="@+id/chat"
-        android:icon="@drawable/ic_chat_black_24dp"
-        android:title="Chat" />
 </menu>

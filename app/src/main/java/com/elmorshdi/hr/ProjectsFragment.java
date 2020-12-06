@@ -1,4 +1,4 @@
-package com.example.ui;
+package com.elmorshdi.hr;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,18 +7,13 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-
-public class ChatFragment extends Fragment {
-
-
+public class ProjectsFragment extends Fragment {
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-
-        return inflater.inflate(R.layout.fragment_chat, container, false);
+        return inflater.inflate(R.layout.fragment_projects, container, false);
     }
 }

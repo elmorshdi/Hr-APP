@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,147 +7,96 @@
     android:orientation="vertical"
     tools:context=".UserInfoFragment">
 
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="@dimen/_10sdp"
-        tools:context=".UserInfoFragment">
+        android:background="@color/colorPrimary">
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabLayout"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/titel"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/_15sdp"
-            android:layout_marginBottom="@dimen/_15sdp"
-            android:background="@drawable/toggle"
-            app:tabBackground="@drawable/tap"
-            app:tabMode="fixed"
-            app:tabRippleColor="@null"
-            app:tabSelectedTextColor="@color/colorPrimaryDark">
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:scaleY="1"
+            android:text="History"
+            android:textColor="#3f434c"
+            android:textScaleX="1"
+            android:textSize="@dimen/_20ssp" />
+    </RelativeLayout>
 
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/tab1"
-                style="@android:style/ButtonBar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/toggle"
-                android:text="User Info "
-                android:textAlignment="center" />
-
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/tab2"
-                style="@android:style/ButtonBar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/toggle"
-                android:text="preferences"
-                android:textAlignment="center" />
-        </com.google.android.material.tabs.TabLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bar"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="@drawable/card"
+        android:elevation="@dimen/_5sdp"
+        android:outlineSpotShadowColor="@color/colorPrimary"
+        android:translationZ="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_15sdp">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp">
 
-            <ImageView
-                android:id="@+id/img"
+
+            <TextView
+                android:id="@+id/stat"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/_150sdp"
-                android:layout_centerInParent="true"
-                android:layout_margin="@dimen/_15sdp"
-                android:src="@drawable/me" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Start Date"
+                android:textColor="#A8000000"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold" />
 
+            <TextView
+                android:id="@+id/manger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/stat"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:text="Manger"
+                android:textColor="#A8000000"
+                android:textSize="@dimen/_12ssp" />
 
+            <TextView
+                android:id="@+id/reason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/manger"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="Reason"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_14ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/status"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_13sdp"
+                android:layout_marginEnd="@dimen/_13sdp"
+                android:layout_marginBottom="@dimen/_13sdp"
+                android:src="@drawable/ic_baseline_call_24"
+                android:text="status"
+                app:tint="@color/colorPrimary" />
         </RelativeLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_15sdp"
-            android:layout_marginTop="@dimen/_15sdp"
-            android:layout_marginBottom="@dimen/_3sdp"
-            android:text="Full Name"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="@dimen/_14ssp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_15sdp"
-            android:layout_marginTop="@dimen/_3sdp"
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:text="Mostafa Elmorshdi"
-            android:textColor="#A8000000"
-            android:textSize="@dimen/_14ssp" />
+    </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_15sdp"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:layout_marginBottom="@dimen/_3sdp"
-            android:text="Title"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="@dimen/_14ssp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_15sdp"
-            android:layout_marginTop="@dimen/_3sdp"
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:text="Android Developer (Soon) "
-            android:textColor="#A8000000"
-            android:textSize="@dimen/_14ssp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_15sdp"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:text="Phone no."
-            android:textColor="@android:color/darker_gray"
-            android:textSize="@dimen/_14ssp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_15sdp"
-            android:layout_marginTop="3dp"
-            android:layout_marginBottom="@dimen/_20sdp"
-            android:text="+0201149137351"
-            android:textColor="#A8000000"
-            android:textSize="@dimen/_14ssp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/bu1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_15sdp"
-                android:layout_weight=".5"
-                android:background="@drawable/bu"
-                android:text=" Edit profile "
-                android:textColor="@color/colorPrimary"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/bu2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_15sdp"
-                android:layout_weight=".5"
-                android:background="@drawable/bu1"
-                android:text=" Save Change "
-                android:textColor="@android:color/white"
-                android:textStyle="bold" />
-        </LinearLayout>
-    </LinearLayout>
-
-</ScrollView>
+</LinearLayout>

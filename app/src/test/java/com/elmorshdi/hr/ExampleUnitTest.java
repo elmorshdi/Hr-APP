@@ -1,4 +1,4 @@
-package com.example.ui;
+package com.elmorshdi.hr;
 
 import org.junit.Test;
 

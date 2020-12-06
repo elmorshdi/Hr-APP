@@ -1,4 +1,4 @@
-package com.example.ui;
+package com.elmorshdi.hr;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -11,47 +11,50 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private BottomNavigationView.OnNavigationItemSelectedListener navListener =
+    private final BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                    Fragment selectedFragment = null;
+                    Fragment fragment = null;
 
                     switch (item.getItemId()) {
-                        case R.id.GuideLines:
-                            selectedFragment = new GuidLinesFragment();
-                            break;
-                        case R.id.chat:
-                            selectedFragment = new ChatFragment();
-                            break;
                         case R.id.projects:
-                            selectedFragment = new ProjectsFragment();
+                            fragment = new ProjectsFragment();
                             break;
                         case R.id.status:
-                            selectedFragment = new StatusFragment();
+                            fragment = new StatusFragment();
                             break;
                         case R.id.user_info:
-                            selectedFragment = new UserInfoFragment();
+                            fragment = new UserInfoFragment();
                             break;
+
                     }
+                    return loadFragment(fragment);
 
-                    assert selectedFragment != null;
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
 
-                    return true;
                 }
             };
+
+    private boolean loadFragment(Fragment fragment) {
+        //switching fragment
+        if (fragment != null) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, fragment)
+                    .commit();
+            return true;
+        }
+        return false;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        loadFragment(new StatusFragment());
 
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
-        if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new GuidLinesFragment()).commit();
-        }
+
     }
 }

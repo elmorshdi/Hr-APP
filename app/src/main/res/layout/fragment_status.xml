@@ -1,42 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#f6f7f9"
     tools:context=".StatusFragment">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
     <RelativeLayout
         android:id="@+id/bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white">
+        android:background="@color/colorPrimary">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:src="@drawable/person"
+            app:civ_border_color="@color/colorAccent"
+            app:civ_border_width="1dp" />
 
         <TextView
             android:id="@+id/app"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_margin="@dimen/_10sdp"
+            android:layout_below="@id/profile_image"
+            android:layout_marginStart="@dimen/_10sdp"
+
             android:scaleY="1"
-            android:text="Project Status"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:text="Trinee name"
             android:textColor="#3f434c"
             android:textScaleX="1"
-            android:textSize="@dimen/_22ssp" />
+            android:textSize="@dimen/_18ssp" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-
-            android:layout_margin="@dimen/_13sdp"
-
-            android:src="@drawable/ic_menu_black_24dp"
-            android:tint="#A8000000" />
+            android:id="@+id/arrow"
+            android:layout_marginStart="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:layout_marginEnd="@dimen/_13sdp"
+            android:layout_marginBottom="@dimen/_13sdp"
+            android:src="@drawable/search"
+            app:tint="#A8000000" />
 
 
     </RelativeLayout>
@@ -50,319 +60,78 @@
         android:layout_marginTop="@dimen/_10sdp"
         android:layout_marginRight="@dimen/_10sdp"
         android:layout_marginBottom="@dimen/_5sdp"
-        android:elevation="@dimen/_18sdp"
-        android:translationZ="@dimen/_18sdp"
+        android:elevation="@dimen/_5sdp"
+        android:outlineSpotShadowColor="@color/colorPrimary"
+        android:translationZ="@dimen/_5sdp"
         android:background="@drawable/card"
         app:cardCornerRadius="@dimen/_15sdp">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="@dimen/_15sdp"
-            android:paddingRight="@dimen/_15sdp"
-            android:paddingBottom="@dimen/_15sdp">
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp">
 
-            <View
-                android:id="@+id/green_view"
-                android:layout_width="@dimen/_35sdp"
-                android:layout_height="@dimen/_3sdp"
-                android:background="#56ee47" />
-
-            <TextView
-                android:id="@+id/approved"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/green_view"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:text="Approved"
-                android:textColor="#56ee47"
-                android:textSize="@dimen/_15ssp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/count"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/green_view"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:text="10 / 07"
-                android:textColor="@android:color/darker_gray"
-                android:textSize="@dimen/_10ssp" />
-
-            <TextView
-                android:id="@+id/templ"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/approved"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:text="Template GMP control"
-                android:textColor="#A8000000"
-                android:textSize="@dimen/_15ssp"
-                android:textStyle="bold" />
-
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:src="@drawable/person"
                 android:id="@+id/img"
                 android:layout_width="@dimen/_60sdp"
                 android:layout_height="@dimen/_60sdp"
-                android:layout_below="@id/templ"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_10sdp"
-                android:src="@drawable/me" />
+                app:civ_border_color="@color/colorAccent"
+                app:civ_border_width="1dp" />
 
             <TextView
-                android:id="@+id/coment"
+                android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/templ"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_toEndOf="@id/img"
-                android:text="comment by :"
-                android:textColor="@android:color/darker_gray"
-                android:textSize="@dimen/_12ssp" />
-
-            <TextView
-                android:id="@+id/mostafa"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/templ"
-                android:layout_marginStart="@dimen/_2sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_toEndOf="@id/coment"
-                android:text="Mostafa Elmorshdi"
+                android:text="name"
                 android:textColor="#A8000000"
-                android:textSize="@dimen/_12ssp" />
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/discri"
+                android:id="@+id/titel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/coment"
-                android:layout_marginStart="@dimen/_2sdp"
-                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_below="@id/name"
+                android:layout_marginTop="@dimen/_2sdp"
                 android:layout_toEndOf="@id/img"
-                android:text="Instructions 1.5,1.4 are clean and done ,good job"
+                android:text="Title"
                 android:textColor="#A8000000"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titel"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_toEndOf="@id/img"
+                android:text="0123456789"
+                android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/_14ssp" />
-        </RelativeLayout>
-
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/card"
-        android:layout_marginLeft="@dimen/_10sdp"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginRight="@dimen/_10sdp"
-        android:layout_marginBottom="@dimen/_5sdp"
-        android:elevation="@dimen/_18sdp"
-        android:background="@drawable/card"
-        android:translationZ="@dimen/_18sdp"
-        app:cardCornerRadius="@dimen/_15sdp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="@dimen/_15sdp"
-            android:paddingRight="@dimen/_15sdp"
-            android:paddingBottom="@dimen/_15sdp">
-
-            <View
-                android:id="@+id/green_view1"
-                android:layout_width="@dimen/_35sdp"
-                android:layout_height="@dimen/_3sdp"
-                android:background="#f1c74d" />
-
-            <TextView
-                android:id="@+id/approved1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/green_view1"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:text="In progress"
-                android:textColor="#f1c74d"
-                android:textSize="@dimen/_15ssp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/count1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/green_view1"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:text="10 / 07"
-                android:textColor="@android:color/darker_gray"
-                android:textSize="@dimen/_10ssp" />
-
-            <TextView
-                android:id="@+id/templ1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/approved1"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:text="Template GMP control"
-                android:textColor="#A8000000"
-                android:textSize="@dimen/_15ssp"
-                android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/img1"
-                android:layout_width="@dimen/_60sdp"
-                android:layout_height="@dimen/_60sdp"
-                android:layout_below="@id/templ1"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_10sdp"
-                android:src="@drawable/me" />
-
-            <TextView
-                android:id="@+id/coment1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/templ1"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_toEndOf="@id/img1"
-                android:text="comment by :"
-                android:textColor="@android:color/darker_gray"
-                android:textSize="@dimen/_12ssp" />
-
-            <TextView
-                android:id="@+id/mostafa1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/templ1"
-                android:layout_marginStart="@dimen/_2sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_toEndOf="@id/coment1"
-                android:text="Mostafa Elmorshdi"
-                android:textColor="#A8000000"
-                android:textSize="@dimen/_12ssp" />
-
-            <TextView
-                android:id="@+id/discri1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/coment1"
-                android:layout_marginStart="@dimen/_2sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_toEndOf="@id/img1"
-                android:text="Instructions 1.5,1.4 are clean and done ,good job"
-                android:textColor="#A8000000"
-                android:textSize="@dimen/_14ssp" />
-        </RelativeLayout>
-
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/card1"
-        android:layout_marginLeft="@dimen/_10sdp"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginRight="@dimen/_10sdp"
-        android:layout_marginBottom="@dimen/_5sdp"
-        android:elevation="@dimen/_18sdp"
-        android:background="@drawable/card"
-        android:translationZ="@dimen/_18sdp"
-        app:cardCornerRadius="@dimen/_15sdp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="@dimen/_15sdp"
-            android:paddingRight="@dimen/_15sdp"
-            android:paddingBottom="@dimen/_15sdp">
-
-            <View
-                android:id="@+id/green_view2"
-                android:layout_width="@dimen/_35sdp"
-                android:layout_height="@dimen/_3sdp"
-                android:background="#f14c4d" />
-
-            <TextView
-                android:id="@+id/approved2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/green_view2"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:text="Deslined"
-                android:textColor="#f14c4d"
-                android:textSize="@dimen/_15ssp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/count2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/green_view2"
+                android:id="@+id/call"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:text="10 / 07"
-                android:textColor="@android:color/darker_gray"
-                android:textSize="@dimen/_10ssp" />
-
-            <TextView
-                android:id="@+id/templ2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/approved2"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:text="Template GMP control"
-                android:textColor="#A8000000"
-                android:textSize="@dimen/_15ssp"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:id="@+id/img2"
-                android:layout_width="@dimen/_60sdp"
-                android:layout_height="@dimen/_60sdp"
-                android:layout_below="@id/templ2"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_10sdp"
-                android:src="@drawable/me" />
-
-            <TextView
-                android:id="@+id/coment2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/templ2"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_toEndOf="@id/img2"
-                android:text="comment by :"
-                android:textColor="@android:color/darker_gray"
-                android:textSize="@dimen/_12ssp" />
-
-            <TextView
-                android:id="@+id/mostafa2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/templ2"
-                android:layout_marginStart="@dimen/_2sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_toEndOf="@id/coment2"
-                android:text="Mostafa Elmorshdi"
-                android:textColor="#A8000000"
-                android:textSize="@dimen/_12ssp" />
-
-            <TextView
-                android:id="@+id/discri2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/coment2"
-                android:layout_marginStart="@dimen/_2sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_toEndOf="@id/img2"
-                android:text="Instructions 1.5,1.4 are clean and done ,good job"
-                android:textColor="#A8000000"
-                android:textSize="@dimen/_14ssp" />
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_13sdp"
+                android:layout_marginEnd="@dimen/_13sdp"
+                android:layout_marginBottom="@dimen/_13sdp"
+                android:src="@drawable/ic_baseline_call_24"
+                app:tint="@color/colorPrimary" />
         </RelativeLayout>
 
 
     </androidx.cardview.widget.CardView>
+
+
 </RelativeLayout>
-    </ScrollView>
