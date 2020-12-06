@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".ProjectsFragment">
 
@@ -25,31 +24,6 @@
             android:textColor="#3f434c"
             android:textScaleX="1"
             android:textSize="@dimen/_20ssp" />
-
-        <TextView
-            android:id="@+id/app"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/titel"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:scaleY="1"
-            android:text="Trinee name"
-            android:textColor="#3f434c"
-            android:textScaleX="1"
-            android:textSize="@dimen/_16ssp" />
-
-        <ImageView
-            android:id="@+id/arrow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="@dimen/_13sdp"
-            android:layout_marginTop="@dimen/_13sdp"
-            android:layout_marginEnd="@dimen/_13sdp"
-            android:layout_marginBottom="@dimen/_13sdp"
-            android:src="@drawable/search"
-            app:tint="#A8000000" />
 
 
     </RelativeLayout>
