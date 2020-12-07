@@ -28,7 +28,7 @@
                 android:drawablePadding="5dp"
                 android:hint="User Id"
                 android:importantForAutofill="no"
-                android:inputType="number"
+                android:inputType="text"
                 android:paddingStart="10dp"
                 android:paddingEnd="0dp"
                 android:textSize="20sp"
@@ -55,6 +55,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
+            android:id="@+id/signin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -62,7 +63,6 @@
             android:layout_marginRight="20dp"
             android:background="@drawable/bu2"
             android:gravity="center"
-            android:onClick="logIn"
             android:text="Login"
             android:textColor="@android:color/white"
             android:textSize="25sp" />

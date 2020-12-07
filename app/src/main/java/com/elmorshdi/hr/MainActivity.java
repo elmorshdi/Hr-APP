@@ -19,13 +19,13 @@ public class MainActivity extends AppCompatActivity {
 
                     switch (item.getItemId()) {
                         case R.id.projects:
-                            fragment = new ProjectsFragment();
+                            fragment = new LeaveReqFragment();
                             break;
                         case R.id.status:
-                            fragment = new StatusFragment();
+                            fragment = new ContactsFragment();
                             break;
                         case R.id.user_info:
-                            fragment = new UserInfoFragment();
+                            fragment = new HistoryFragment();
                             break;
 
                     }
@@ -51,10 +51,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        loadFragment(new StatusFragment());
-
+        loadFragment(new ContactsFragment());
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
-
     }
 }

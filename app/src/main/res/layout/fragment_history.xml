@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f6f7f9"
-    tools:context=".StatusFragment">
+    android:orientation="vertical"
+    tools:context=".HistoryFragment">
 
     <RelativeLayout
         android:id="@+id/bar"
@@ -13,42 +13,18 @@
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/profile_image"
-            android:layout_width="@dimen/_50sdp"
-            android:layout_height="@dimen/_50sdp"
-            android:layout_margin="@dimen/_5sdp"
-            android:src="@drawable/person"
-            app:civ_border_color="@color/colorAccent"
-            app:civ_border_width="1dp" />
-
         <TextView
-            android:id="@+id/app"
+            android:id="@+id/titel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/profile_image"
-            android:layout_marginStart="@dimen/_10sdp"
-
-            android:scaleY="1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginBottom="@dimen/_5sdp"
-            android:text="Trinee name"
+            android:scaleY="1"
+            android:text="History"
             android:textColor="#3f434c"
             android:textScaleX="1"
-            android:textSize="@dimen/_18ssp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:id="@+id/arrow"
-            android:layout_marginStart="@dimen/_13sdp"
-            android:layout_marginTop="@dimen/_13sdp"
-            android:layout_marginEnd="@dimen/_13sdp"
-            android:layout_marginBottom="@dimen/_13sdp"
-            android:src="@drawable/search"
-            app:tint="#A8000000" />
-
-
+            android:textSize="@dimen/_20ssp" />
     </RelativeLayout>
 
     <androidx.cardview.widget.CardView
@@ -60,10 +36,10 @@
         android:layout_marginTop="@dimen/_10sdp"
         android:layout_marginRight="@dimen/_10sdp"
         android:layout_marginBottom="@dimen/_5sdp"
+        android:background="@drawable/card"
         android:elevation="@dimen/_5sdp"
         android:outlineSpotShadowColor="@color/colorPrimary"
         android:translationZ="@dimen/_5sdp"
-        android:background="@drawable/card"
         app:cardCornerRadius="@dimen/_15sdp">
 
         <RelativeLayout
@@ -73,60 +49,49 @@
             android:paddingRight="@dimen/_10sdp"
             android:paddingBottom="@dimen/_10sdp">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_marginEnd="@dimen/_5sdp"
-                android:src="@drawable/person"
-                android:id="@+id/img"
-                android:layout_width="@dimen/_60sdp"
-                android:layout_height="@dimen/_60sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                app:civ_border_color="@color/colorAccent"
-                app:civ_border_width="1dp" />
 
             <TextView
-                android:id="@+id/name"
+                android:id="@+id/stat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:layout_toEndOf="@id/img"
-                android:text="name"
+                android:text="Start Date"
                 android:textColor="#A8000000"
                 android:textSize="@dimen/_15ssp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/titel"
+                android:id="@+id/manger"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/name"
+                android:layout_below="@id/stat"
                 android:layout_marginTop="@dimen/_2sdp"
-                android:layout_toEndOf="@id/img"
-                android:text="Title"
+                android:text="Manger"
                 android:textColor="#A8000000"
                 android:textSize="@dimen/_12ssp" />
 
             <TextView
-                android:id="@+id/number"
+                android:id="@+id/reason"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/titel"
+                android:layout_below="@id/manger"
                 android:layout_marginStart="@dimen/_2sdp"
                 android:layout_marginTop="@dimen/_5sdp"
-                android:layout_toEndOf="@id/img"
-                android:text="0123456789"
+                android:text="Reason"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/_14ssp" />
 
-            <ImageView
-                android:id="@+id/call"
-                android:layout_width="@dimen/_30sdp"
-                android:layout_height="@dimen/_30sdp"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/status"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="@dimen/_13sdp"
                 android:layout_marginEnd="@dimen/_13sdp"
                 android:layout_marginBottom="@dimen/_13sdp"
                 android:src="@drawable/ic_baseline_call_24"
+                android:text="status"
                 app:tint="@color/colorPrimary" />
         </RelativeLayout>
 
@@ -134,4 +99,4 @@
     </androidx.cardview.widget.CardView>
 
 
-</RelativeLayout>
+</LinearLayout>
