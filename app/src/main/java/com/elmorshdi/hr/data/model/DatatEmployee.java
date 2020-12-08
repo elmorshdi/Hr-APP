@@ -1,9 +1,16 @@
-package com.elmorshdi.hr;
+package com.elmorshdi.hr.data.model;
+
+import androidx.annotation.NonNull;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
 
-public class DatatEmployee implements Serializable {
+@Entity
 
+public class DatatEmployee implements Serializable {
+    @PrimaryKey
+    @NonNull
     private String name;
     private String tittle;
     private String phone;
@@ -16,16 +23,6 @@ public class DatatEmployee implements Serializable {
         this.circleImage = circleImage;
     }
 
-    public DatatEmployee(String name, String tittle) {
-        this.name = name;
-        this.tittle = tittle;
-    }
-
-    public DatatEmployee(String name, String tittle, String phone) {
-        this.name = name;
-        this.tittle = tittle;
-        this.phone = phone;
-    }
 
     public int getCircleImage() {
         return circleImage;

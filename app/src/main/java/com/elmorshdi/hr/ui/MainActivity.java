@@ -1,4 +1,4 @@
-package com.elmorshdi.hr;
+package com.elmorshdi.hr.ui;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -7,6 +7,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import com.elmorshdi.hr.R;
+import com.elmorshdi.hr.ui.contacts.ContactsFragment;
+import com.elmorshdi.hr.ui.history.HistoryFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -54,5 +57,8 @@ public class MainActivity extends AppCompatActivity {
         loadFragment(new ContactsFragment());
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
+
+
     }
+
 }

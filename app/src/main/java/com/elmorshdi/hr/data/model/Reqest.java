@@ -1,7 +1,17 @@
-package com.elmorshdi.hr;
+package com.elmorshdi.hr.data.model;
 
+import androidx.annotation.NonNull;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity
 class Reqest {
-    String manger, reason, startday, numberOfDay;
+    @PrimaryKey
+    @NonNull
+    String reason;
+    String startday;
+    String numberOfDay;
+    String manger;
 
     public Reqest(String manger, String reason, String startday, String numberOfDay) {
         this.manger = manger;

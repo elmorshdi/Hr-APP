@@ -1,4 +1,4 @@
-package com.elmorshdi.hr;
+package com.elmorshdi.hr.ui.contacts;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,16 +13,20 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
+import com.elmorshdi.hr.R;
+import com.elmorshdi.hr.data.model.DatatEmployee;
+import com.elmorshdi.hr.ui.ProfileActivity;
+
+import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MyCustomAdapter extends RecyclerView.Adapter<MyCustomAdapter.MyViewHolder> {
 
-    private final ArrayList<DatatEmployee> mydata;
     private final Context context;
+    private List<DatatEmployee> mydata;
 
-    public MyCustomAdapter(ArrayList<DatatEmployee> mydata, Context context) {
+    public MyCustomAdapter(List<DatatEmployee> mydata, Context context) {
 
         this.mydata = mydata;
         this.context = context;
@@ -47,8 +51,10 @@ public class MyCustomAdapter extends RecyclerView.Adapter<MyCustomAdapter.MyView
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_CALL);
-                intent.setData(Uri.parse(employee.getPhone()));
+                intent.setData(Uri.parse("tel:" + employee.getPhone()));
                 context.startActivity(intent);
+
+
             }
         });
         holder.cardView.setOnClickListener(new View.OnClickListener() {
@@ -66,9 +72,18 @@ public class MyCustomAdapter extends RecyclerView.Adapter<MyCustomAdapter.MyView
         });
     }
 
+    public DatatEmployee getitemAt(int position) {
+        return mydata.get(position);
+    }
+
     @Override
     public int getItemCount() {
         return mydata.size();
+    }
+
+    public void setData(List<DatatEmployee> data) {
+        this.mydata = data;
+        notifyDataSetChanged();
     }
 
     // inner class or nested class  (public or static )
@@ -92,8 +107,4 @@ public class MyCustomAdapter extends RecyclerView.Adapter<MyCustomAdapter.MyView
         }
 
     }
-
-    //
-
-
 }

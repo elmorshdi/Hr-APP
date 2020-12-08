@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.LeaveReqFragment">
+    tools:context=".ui.AddActivity">
 
     <RelativeLayout
         android:id="@+id/bar"
@@ -20,30 +21,43 @@
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginBottom="@dimen/_5sdp"
             android:scaleY="1"
-            android:text="Leave reqest"
+            android:text="Add Contact"
             android:textColor="#3f434c"
             android:textScaleX="1"
             android:textSize="@dimen/_20ssp" />
 
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:layout_marginEnd="@dimen/_13sdp"
+            android:layout_marginBottom="@dimen/_13sdp"
+            android:background="@color/transparent"
+            android:onClick="back"
+            android:src="@drawable/arrow"
+            app:tint="#A8000000" />
 
     </RelativeLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/number_of_day_text_input_layout"
+        android:id="@+id/name_text_input_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp">
 
         <EditText
-            android:id="@+id/number_of_day"
+            android:id="@+id/name"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:drawablePadding="5dp"
-            android:hint="number of day"
+            android:hint="name"
             android:importantForAutofill="no"
-            android:inputType="number"
+            android:inputType="text"
             android:paddingStart="10dp"
             android:paddingEnd="0dp"
             android:textSize="20sp"
@@ -57,13 +71,13 @@
         android:layout_margin="10dp">
 
         <EditText
-            android:id="@+id/start_date"
+            android:id="@+id/title"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:drawablePadding="5dp"
-            android:hint="start date"
+            android:hint="title"
             android:importantForAutofill="no"
             android:inputType="text"
             android:paddingStart="10dp"
@@ -73,56 +87,36 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/manger_text_input_layout"
+        android:id="@+id/phone_text_input_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp">
 
         <EditText
-            android:id="@+id/manger"
+            android:id="@+id/phone"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:drawablePadding="5dp"
-            android:hint="manger"
+            android:hint="phone"
             android:importantForAutofill="no"
-            android:inputType="text"
+            android:inputType="phone"
             android:paddingStart="10dp"
             android:paddingEnd="0dp"
             android:textSize="20sp"
             tools:ignore="TextFields" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/reason_text_input_layout"
-        android:layout_width="match_parent"
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp">
-
-        <EditText
-            android:id="@+id/reason"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:drawablePadding="5dp"
-            android:hint="reason"
-            android:importantForAutofill="no"
-            android:inputType="text"
-            android:paddingStart="10dp"
-            android:paddingEnd="0dp"
-            android:textSize="20sp"
-            tools:ignore="TextFields" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-<Button
-    android:id="@+id/submit"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center_horizontal"
-    android:layout_margin="@dimen/_10sdp"
-    android:background="@drawable/bu2"
-    android:text="Submit"
-    android:textColor="@android:color/white" />
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/bu2"
+        android:onClick="add"
+        android:text="Add"
+        android:textColor="@android:color/white" />
 </LinearLayout>

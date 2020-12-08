@@ -7,11 +7,11 @@
 
     <item
         android:id="@+id/projects"
-        android:icon="@drawable/messagesico"
+        android:icon="@drawable/ic_chat_black_24dp"
         android:title="Leave req" />
     <item
         android:id="@+id/user_info"
-        android:icon="@drawable/attendace"
+        android:icon="@drawable/ic_assignment_black_24dp"
         android:title="History" />
 
 </menu>

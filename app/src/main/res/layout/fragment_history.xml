@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".HistoryFragment">
+    tools:context=".ui.history.HistoryFragment">
 
     <RelativeLayout
         android:id="@+id/bar"
@@ -27,6 +27,16 @@
             android:textSize="@dimen/_20ssp" />
     </RelativeLayout>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bar"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/_10sdp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/card"
         android:layout_width="match_parent"
@@ -42,58 +52,7 @@
         android:translationZ="@dimen/_5sdp"
         app:cardCornerRadius="@dimen/_15sdp">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="@dimen/_10sdp"
-            android:paddingRight="@dimen/_10sdp"
-            android:paddingBottom="@dimen/_10sdp">
 
-
-            <TextView
-                android:id="@+id/stat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:text="Start Date"
-                android:textColor="#A8000000"
-                android:textSize="@dimen/_15ssp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/manger"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/stat"
-                android:layout_marginTop="@dimen/_2sdp"
-                android:text="Manger"
-                android:textColor="#A8000000"
-                android:textSize="@dimen/_12ssp" />
-
-            <TextView
-                android:id="@+id/reason"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/manger"
-                android:layout_marginStart="@dimen/_2sdp"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:text="Reason"
-                android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/_14ssp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/status"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="@dimen/_13sdp"
-                android:layout_marginEnd="@dimen/_13sdp"
-                android:layout_marginBottom="@dimen/_13sdp"
-                android:src="@drawable/ic_baseline_call_24"
-                android:text="status"
-                app:tint="@color/colorPrimary" />
-        </RelativeLayout>
 
 
     </androidx.cardview.widget.CardView>

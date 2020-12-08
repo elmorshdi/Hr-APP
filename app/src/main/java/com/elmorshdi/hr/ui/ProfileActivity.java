@@ -1,10 +1,15 @@
-package com.elmorshdi.hr;
+package com.elmorshdi.hr.ui;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.elmorshdi.hr.R;
+import com.elmorshdi.hr.data.Repository;
+import com.elmorshdi.hr.data.model.DatatEmployee;
 
 public class ProfileActivity extends AppCompatActivity {
     private String name;
@@ -33,5 +38,19 @@ public class ProfileActivity extends AppCompatActivity {
         phone_tv.setText(phone);
         imageView.setImageResource(circleImage);
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
+    public void back(View view) {
+        onBackPressed();
+    }
+
+    public void delet(View view) {
+        Repository repository = new Repository(this);
+        repository.delete(new DatatEmployee(name, title, phone, circleImage));
     }
 }

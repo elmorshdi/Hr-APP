@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.ProfileActivity">
 
     <RelativeLayout
         android:id="@+id/bar"
@@ -24,6 +25,20 @@
             android:textColor="#3f434c"
             android:textScaleX="1"
             android:textSize="@dimen/_20ssp" />
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:layout_marginEnd="@dimen/_13sdp"
+            android:layout_marginBottom="@dimen/_13sdp"
+            android:background="@color/transparent"
+            android:onClick="back"
+            android:src="@drawable/arrow"
+            app:tint="#A8000000" />
     </RelativeLayout>
     <LinearLayout
         android:layout_below="@+id/bar"
@@ -31,7 +46,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="@dimen/_10sdp"
-        tools:context=".HistoryFragment"
+        tools:context=".ui.history.HistoryFragment"
         tools:ignore="MissingConstraints">
 
 
@@ -110,6 +125,17 @@
             android:textColor="#A8000000"
             android:textSize="@dimen/_14ssp" />
 
+        <ImageButton
+            android:id="@+id/delet"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:layout_marginEnd="@dimen/_13sdp"
+            android:layout_marginBottom="@dimen/_13sdp"
+            android:background="@drawable/ic_baseline_delete_forever_24"
+            android:onClick="delet" />
     </LinearLayout>
 
 </RelativeLayout>

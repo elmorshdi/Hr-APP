@@ -1,4 +1,4 @@
-package com.elmorshdi.hr;
+package com.elmorshdi.hr.ui;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,6 +9,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.elmorshdi.hr.R;
 
 public class LoginActivity extends AppCompatActivity {
     EditText user_name;
@@ -23,12 +25,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        pref = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
 
-        s = pref.getString("login", null);
-        if (s == "yes") {
-            goMain();
-        }
         user_name = findViewById(R.id.loginemail);
         pass = findViewById(R.id.loginpassword);
         signIn = findViewById(R.id.signin);
@@ -45,10 +42,7 @@ public class LoginActivity extends AppCompatActivity {
     public void logIn() {
         String user = user_name.getText().toString();
         String password = pass.getText().toString();
-        if (user.equals("adman") && password.equals("adman")) {
-            editor = pref.edit();
-            editor.putString("login", "yes");
-            editor.commit();
+        if (user.equals("admin") && password.equals("admin")) {
             goMain();
         } else {
             Toast.makeText(getBaseContext(), "User Name or Password is Wrong ", Toast.LENGTH_SHORT).show();

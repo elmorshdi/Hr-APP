@@ -1,68 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
-
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="10dp"
-    app:cardBackgroundColor="#E3E1E2"
-    app:cardCornerRadius="15dp">
+    android:id="@+id/card"
+    android:layout_width="wrap_content"
+    android:layout_height="105dp"
+    android:layout_marginLeft="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:layout_marginRight="@dimen/_10sdp"
+    android:layout_marginBottom="@dimen/_5sdp"
+    android:background="@drawable/card"
+    android:elevation="@dimen/_5sdp"
+    android:outlineSpotShadowColor="@color/colorPrimary"
+    android:translationZ="@dimen/_5sdp"
+    app:cardCornerRadius="@dimen/_15sdp">
 
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp">
 
-        <!-- Media -->
-        <ImageView
-            android:id="@+id/card_img"
-            android:layout_width="150dp"
-            android:layout_height="194dp"
 
-            android:background="@drawable/person"
-            android:scaleType="centerInside" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/start"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Start Date"
+            android:textColor="#A8000000"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold" />
 
-            <!-- Title, secondary and supporting text -->
-            <TextView
-                android:id="@+id/card_tvname"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Name" />
+        <TextView
+            android:id="@+id/manger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/start"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:text="Manger"
+            android:textColor="#A8000000"
+            android:textSize="@dimen/_12ssp" />
 
-            <TextView
-                android:id="@+id/card_tvtitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Title" />
+        <TextView
+            android:id="@+id/reason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/manger"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="Reason"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_14ssp" />
 
-            <TextView
-                android:id="@+id/card_tvphone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Phone" />
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_13sdp"
+            android:layout_marginEnd="@dimen/_13sdp"
+            android:layout_marginBottom="@dimen/_13sdp"
+            android:src="@drawable/ic_baseline_call_24"
+            android:text="status"
+            app:tint="@color/colorPrimary" />
+    </RelativeLayout>
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/card_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:text="Call"
-                app:icon="@android:drawable/ic_menu_call" />
-
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-</com.google.android.material.card.MaterialCardView>
+</androidx.cardview.widget.CardView>
