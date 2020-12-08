@@ -5,7 +5,7 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity
-class Reqest {
+public class Reqest {
     @PrimaryKey
     @NonNull
     String reason;

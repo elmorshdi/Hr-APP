@@ -11,8 +11,8 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 
 import com.elmorshdi.hr.R;
-import com.elmorshdi.hr.Reqest;
 import com.elmorshdi.hr.data.Repository;
+import com.elmorshdi.hr.data.model.Reqest;
 
 public class LeaveReqFragment extends Fragment {
 

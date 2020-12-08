@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.elmorshdi.hr.R;
-import com.elmorshdi.hr.data.Reqest;
+import com.elmorshdi.hr.data.model.Reqest;
 
 import java.util.List;
 
